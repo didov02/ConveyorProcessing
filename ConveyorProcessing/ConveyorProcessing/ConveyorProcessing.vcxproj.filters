@@ -23,5 +23,8 @@
     <ClInclude Include="seenumbersandfunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="changeonenumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

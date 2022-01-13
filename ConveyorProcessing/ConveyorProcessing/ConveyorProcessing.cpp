@@ -4,6 +4,7 @@
 #include<fstream>
 #include<sstream>
 #include "seenumbersandfunctions.h"
+#include "changeonenumber.h"
 
 using namespace std;
 
@@ -43,57 +44,6 @@ void Options(int option)
 	else if (option == 3)//option three
 	{
 		SeeYourFunctions();
-	}
-	else if (option == 4)//option four
-	{
-		int line;
-		string newFunction;
-
-		cout << "On witch line you want to change the function: ";
-		cin >> line;//on which line you want to change the function
-
-		cout << "New function: ";
-		cin >> newFunction;//with witch function do you want to change it
-
-		ChangeOneFunction(line, newFunction);
-
-		cout << endl;
-	}
-	else if (option == 5)//option five
-	{
-		Matrix();
-	}
-	else if (option == 6)//option six
-	{
-		string answer;
-		cout << "Do you want to use carry mode?" << endl;
-		cin >> answer;
-
-		string carryMode = "Don't use carry mode";
-		if (answer == "Yes")
-		{
-			carryMode = "Use carry mode";
-		}
-
-		SaveInPlainText(carryMode);
-
-		cout << endl;
-	}
-	else if (option == 7)//option seven
-	{
-		string answer;
-		cout << "Do you want to use carry mode?" << endl;
-		cin >> answer;
-
-		string carryMode = "Don't use carry mode";
-		if (answer == "Yes")
-		{
-			carryMode = "Use carry mode";
-		}
-
-		SaveInJSONFormat(carryMode);
-
-		cout << endl;
 	}
 }
 

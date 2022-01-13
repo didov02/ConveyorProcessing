@@ -142,6 +142,7 @@
     <ClCompile Include="ConveyorProcessing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="changeonenumber.h" />
     <ClInclude Include="seenumbersandfunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
