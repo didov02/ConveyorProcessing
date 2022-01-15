@@ -5,6 +5,9 @@
 #include<sstream>
 #include "seenumbersandfunctions.h"
 #include "changeonenumber.h"
+#include "changeonefunction.h"
+#include "getresult.h"
+#include "matrix.h"
 
 using namespace std;
 
@@ -44,6 +47,25 @@ void Options(int option)
 	else if (option == 3)//option three
 	{
 		SeeYourFunctions();
+	}
+	else if (option == 4)//option four
+	{
+		int line;
+		string newFunction;
+
+		cout << "On witch line you want to change the function: ";
+		cin >> line;//on which line you want to change the function
+
+		cout << "New function: ";
+		cin >> newFunction;//with witch function do you want to change it
+
+		ChangeOneFunction(line, newFunction);
+
+		cout << endl;
+	}
+	else if (option == 5)//option five
+	{
+		Matrix();
 	}
 }
 

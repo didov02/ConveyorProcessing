@@ -26,5 +26,14 @@
     <ClInclude Include="changeonenumber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="changeonefunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="getresult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

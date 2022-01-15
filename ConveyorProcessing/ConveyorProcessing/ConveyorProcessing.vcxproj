@@ -142,7 +142,10 @@
     <ClCompile Include="ConveyorProcessing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="changeonefunction.h" />
     <ClInclude Include="changeonenumber.h" />
+    <ClInclude Include="getresult.h" />
+    <ClInclude Include="matrix.h" />
     <ClInclude Include="seenumbersandfunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
