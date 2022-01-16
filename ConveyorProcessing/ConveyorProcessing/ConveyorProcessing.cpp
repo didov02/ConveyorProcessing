@@ -7,7 +7,9 @@
 #include "changeonenumber.h"
 #include "changeonefunction.h"
 #include "getresult.h"
+#include "getresultwithcarrymode.h"
 #include "matrix.h"
+#include "plaintext.h"
 
 using namespace std;
 
@@ -66,6 +68,22 @@ void Options(int option)
 	else if (option == 5)//option five
 	{
 		Matrix();
+	}
+	else if (option == 6)//option six
+	{
+		string answer;
+		cout << "Do you want to use carry mode?" << endl;
+		cin >> answer;
+
+		string carryMode = "Don't use carry mode";
+		if (answer == "Yes")
+		{
+			carryMode = "Use carry mode";
+		}
+
+		SaveInPlainText(carryMode);
+
+		cout << endl;
 	}
 }
 
