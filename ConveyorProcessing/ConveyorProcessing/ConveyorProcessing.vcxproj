@@ -146,6 +146,7 @@
     <ClInclude Include="changeonenumber.h" />
     <ClInclude Include="getresult.h" />
     <ClInclude Include="getresultwithcarrymode.h" />
+    <ClInclude Include="jsonformat.h" />
     <ClInclude Include="matrix.h" />
     <ClInclude Include="plaintext.h" />
     <ClInclude Include="seenumbersandfunctions.h" />

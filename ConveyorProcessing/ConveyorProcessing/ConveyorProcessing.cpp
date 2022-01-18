@@ -10,6 +10,7 @@
 #include "getresultwithcarrymode.h"
 #include "matrix.h"
 #include "plaintext.h"
+#include "jsonformat.h"
 
 using namespace std;
 
@@ -82,6 +83,22 @@ void Options(int option)
 		}
 
 		SaveInPlainText(carryMode);
+
+		cout << endl;
+	}
+	else if (option == 7)//option seven
+	{
+		string answer;
+		cout << "Do you want to use carry mode?" << endl;
+		cin >> answer;
+
+		string carryMode = "Don't use carry mode";
+		if (answer == "Yes")
+		{
+			carryMode = "Use carry mode";
+		}
+
+		SaveInJSONFormat(carryMode);
 
 		cout << endl;
 	}
