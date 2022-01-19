@@ -14,6 +14,7 @@ void SeeYourNumbers()
 			cout << number << endl;
 		}
 	}
+
 	in.close();
 	cout << endl;
 }
@@ -30,6 +31,7 @@ void SeeYourFunctions()
 			cout << output << endl;
 		}
 	}
+
 	in.close();
 	cout << endl;
 }

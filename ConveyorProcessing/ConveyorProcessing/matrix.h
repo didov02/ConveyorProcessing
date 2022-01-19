@@ -21,6 +21,7 @@ void Matrix()
 			double result = GetResult(function, number);
 			out << result << " ";
 		}
+
 		out << endl;
 	}
 

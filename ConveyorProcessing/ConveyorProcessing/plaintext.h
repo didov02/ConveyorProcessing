@@ -26,6 +26,7 @@ void SaveInPlainText(string mode)
 				double result = GetResultWithCarryMode(function, number, numberToAdd);
 				resultInFile << result << " ";
 			}
+
 			resultInFile << endl;
 			inFunctions.close();
 		}
@@ -50,6 +51,7 @@ void SaveInPlainText(string mode)
 				double result = GetResult(function, number);
 				resultInFile << result << " ";
 			}
+
 			resultInFile << endl;
 			inFunctions.close();
 		}

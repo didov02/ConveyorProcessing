@@ -117,13 +117,16 @@ void SaveInJSONFormat(string mode)
 				{
 					resultInFile << result << ", ";
 				}
+
 				currentCounter++;
 			}
+
 			resultInFile << endl;
 			inFunctions.close();
 
 			rowsCounter++;
 		}
+
 		inNumbers.close();
 
 		resultInFile << "\t]," << endl;
@@ -133,18 +136,19 @@ void SaveInJSONFormat(string mode)
 		ifstream in;
 		in.open("temporary.txt");
 		number = 0;
+		
 		int counterForElements = 1;
-		int counterForRows = 1;
-		int numbersAtOneRow = functionsCount;
+		rowsCounter = 1;
+
 		while (in >> number)
 		{
 			if (counterForElements == 1)//first element
 			{
 				resultInFile << "\t\t\[" << number << ", ";
 			}
-			else if (counterForElements == numbersAtOneRow)//last element
+			else if (counterForElements == numbersCount)//last element
 			{
-				if (counterForRows == functionsCount)
+				if (rowsCounter == functionsCount)
 				{
 					resultInFile << number << "]" << endl;
 					counterForElements = 0;
@@ -153,7 +157,7 @@ void SaveInJSONFormat(string mode)
 				{
 					resultInFile << number << "]," << endl;
 					counterForElements = 0;
-					counterForRows++;
+					rowsCounter++;
 				}
 			}
 			else
@@ -186,6 +190,11 @@ void SaveInJSONFormat(string mode)
 		resultInFile << "{" << endl;
 		resultInFile << "\t\"byRows\": [" << endl;
 
+		int functionsCount = GetFunctionsCount();
+		int numbersCount = GetNumbersCount();
+
+		int rowsCounter = 1;
+
 		while (inNumbers >> number)
 		{
 			ifstream inFunctions;
@@ -193,7 +202,6 @@ void SaveInJSONFormat(string mode)
 			string function;
 
 			int currentCounter = 1;
-			int functionsCount = GetFunctionsCount();
 
 			resultInFile << "\t\t\[";
 
@@ -203,17 +211,29 @@ void SaveInJSONFormat(string mode)
 
 				if (currentCounter == functionsCount)
 				{
-					resultInFile << result << "],";
+					if (rowsCounter == numbersCount)
+					{
+						resultInFile << result << "]";
+					}
+					else
+					{
+						resultInFile << result << "],";
+					}
 				}
 				else
 				{
 					resultInFile << result << ", ";
 				}
+
 				currentCounter++;
 			}
+
 			resultInFile << endl;
 			inFunctions.close();
+
+			rowsCounter++;
 		}
+
 		inNumbers.close();
 
 		resultInFile << "\t]," << endl;
@@ -223,6 +243,8 @@ void SaveInJSONFormat(string mode)
 		inFunctions.open("functions.txt");
 		string function;
 
+		rowsCounter = 1;
+
 		while (inFunctions >> function)
 		{
 			ifstream inNumbers;
@@ -230,7 +252,6 @@ void SaveInJSONFormat(string mode)
 			double number;
 
 			int currentCounter = 1;
-			int numbersCount = GetNumbersCount();
 
 			resultInFile << "\t\t\[";
 
@@ -240,17 +261,29 @@ void SaveInJSONFormat(string mode)
 
 				if (currentCounter == numbersCount)
 				{
-					resultInFile << result << "],";
+					if (rowsCounter == functionsCount)
+					{
+						resultInFile << result << "]";
+					}
+					else
+					{
+						resultInFile << result << "],";
+					}
 				}
 				else
 				{
 					resultInFile << result << ", ";
 				}
+
 				currentCounter++;
 			}
+
 			resultInFile << endl;
 			inNumbers.close();
+
+			rowsCounter++;
 		}
+
 		inFunctions.close();
 
 		resultInFile << "\t]," << endl;
