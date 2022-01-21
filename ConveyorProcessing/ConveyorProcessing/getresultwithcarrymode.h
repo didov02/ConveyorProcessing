@@ -1,3 +1,19 @@
+/**
+*
+* Solution to course project # 1
+* Introduction to programming course
+* Faculty of Mathematics and Informatics of Sofia University
+* Winter semester 2021/2022
+*
+* @author Dian Vasilev
+* @idnumber fn6MI0600107
+* @compiler VC
+* @github https://github.com/didov02/ConveyorProcessing
+*
+* <file with functions to get the matrix with carry mode>
+*
+*/
+
 #pragma once
 
 double GetResultWithCarryMode(string func, double num, double& savedNum)
